@@ -77,7 +77,7 @@ class DayNamesRow extends StatelessWidget {
     Key? key,
     required this.textStyle,
     List<String>? weekDays,
-  })  : weekDays = weekDays ?? defaultWeekDays(),
+  })  : weekDays = weekDays ?? chinaWeekDays,
         super(key: key);
 
   final TextStyle textStyle;
@@ -246,7 +246,7 @@ class DateRangePickerWidgetState extends State<DateRangePickerWidget> {
           ),
         ),
         const SizedBox(
-          height: 20,
+          height: 8,
         ),
         IntrinsicHeight(
           child: Row(
@@ -282,7 +282,7 @@ class DateRangePickerWidgetState extends State<DateRangePickerWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 200,
+            width: 140,
             decoration: BoxDecoration(
               color: widget.theme.quickDateRangeBackgroundColor,
               borderRadius: BorderRadius.only(

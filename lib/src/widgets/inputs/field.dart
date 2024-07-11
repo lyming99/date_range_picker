@@ -63,6 +63,7 @@ class DateRangeField extends StatelessWidget {
         final DateRange? dateRange = await showDateRangePicker(
           widgetContext: context,
           pickerBuilder: pickerBuilder,
+
         );
 
         onDateRangeSelected?.call(dateRange);

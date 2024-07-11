@@ -53,7 +53,7 @@ Future<DateRange?> showDateRangePickerDialogOnWidget({
   BuildContext? context,
   Color barrierColor = Colors.transparent,
   Widget Function({DateRange? selectedDateRange})? dialogFooterBuilder,
-  Offset delta = const Offset(0, 60),
+  Offset delta = const Offset(0, 32),
 }) async {
   // Compute widget position on screen
   final RenderBox renderBox = widgetContext.findRenderObject() as RenderBox;
@@ -100,8 +100,8 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog> {
       color: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
+          color: Color(0xff142632),
+          border: Border.all(color: Color(0xffe8be72)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
@@ -149,8 +149,8 @@ class DateRangePickerDialogFooter extends StatelessWidget {
   const DateRangePickerDialogFooter({
     super.key,
     this.selectedDateRange,
-    this.cancelText = "Cancel",
-    this.confirmText = "Confirm",
+    this.cancelText = "取消",
+    this.confirmText = "确定",
   });
 
   final String cancelText;
